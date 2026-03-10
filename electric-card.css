@@ -1,0 +1,98 @@
+/* A. ELECTRIC CARD - CORREGIDO ----------------------------------------------------*/
+/* 1. Base: El contenedor del Cristal Líquido */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que salten a la siguiente línea si no caben */
+    justify-content: center; /* Centra horizontalmente todo el bloque */
+    align-items: center;
+    flex-direction: column;
+    gap: 30px; /* Espaciado uniforme entre todas las tarjetas */
+    padding: 50px;
+}
+
+.liquid-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #000; /* Fondo sólido necesario para ocultar el fondo del giro */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(87, 62, 62, 0.15);
+    border-radius: 25px;
+    padding: 0px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    z-index: 1;
+}
+
+/* 2. El Borde Eléctrico: Ahora con z-index más bajo para que no interfiera */
+.electric-card:before {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, #6f00ff);
+    box-shadow: 0 0 40px 25px rgba(111, 0, 255, 0.4);
+    animation: rotate 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.9s;
+    z-index: 0; /* Ajustado para quedar en la base */
+}
+
+/* 3. El "hueco" central: Modificado para permitir el efecto cristal */
+.electric-card::after {
+    content: "";
+    position: absolute;
+    inset: 18px; /* El grosor del borde */
+    /* CAMBIO AQUÍ: Fondo ligeramente translúcido para mantener el Glassmorphism */
+    background: #0b0b0b; 
+    border-radius: 20px;
+    z-index: 0; /* Esto crea una capa que atrapa el gradiente detrás */
+}
+
+/* 4. Activar el brillo al pasar el cursor */
+.electric-card:hover::before {
+    opacity: 1;
+}
+
+/* Contenido dentro de la tarjeta */
+.electric-content {
+    position: absolute;
+    overflow: hidden;
+    inset: 10px; /* Mismo tamaño que el ::after */
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px; /* Más espacio para que el contenido respire */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Reparte el espacio entre los elementos */
+    color: white;
+    box-sizing: border-box; 
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.electric-content h3 { margin: 0; }
+.electric-content p { margin: 10px 0; line-height: 1.5; }
+
+/* Botón con efecto Glass al hacer hover (Sin cambios) */
+.liquid-btn {
+    background: rgba(111, 0, 255, 0.4);
+    border-color: rgba(111, 0, 255, 0.4);
+    color: white;
+    padding: 10px 20px;
+    width: 20vh; /* Se ajusta solo al texto */
+    align-self: center; /* Lo centra horizontalmente en la tarjeta */
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.liquid-btn:hover {
+    box-shadow: 0 0 20px rgba(111, 0, 255, 1);
+}

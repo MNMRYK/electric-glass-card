@@ -1,0 +1,92 @@
+/*Contenedor principal que agrupa todas las tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que salten a la siguiente línea si no caben */
+    justify-content: center; /* Centra horizontalmente todo el bloque */
+    align-items: center;
+    flex-direction: column;
+    gap: 30px; /* Espaciado uniforme entre todas las tarjetas */
+    padding: 50px;
+}
+
+/* B. CARD WRAPPER -------------------------------------------------------------------------*/
+/* 1. El Contenedor: Mantenemos el overflow para el giro */
+.card-wrapper {
+    position: relative; 
+    width: 300px; 
+    height: 400px; 
+    background: #000;
+    border-radius: 20px; /* Un poco más de radio queda más moderno */
+    box-shadow: 0 10px 25px -5px rgba(51, 0, 0, 0.3), 
+                0 8px 10px -6px rgba(51, 0, 0, 0.3);
+    padding: 4px; /* Grosor del borde eléctrico */
+    overflow: hidden; 
+    cursor: pointer; 
+    margin: 30px;
+    display: flex;
+}
+
+/* 2. El Giro Constante (Se queda igual, es genial) */
+.card-wrapper::before {
+    content: ""; 
+    position: absolute; 
+    top: -50%; left: -50%; 
+    width: 200%; 
+    height: 200%;
+    background: conic-gradient(transparent, #ff0055, transparent 30%);
+    animation: rotate 4s linear infinite;
+}
+
+/* 3. El Contenido: Aquí es donde damos el aire */
+.card-content {
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    background: #0b0b0b; 
+    border-radius: 16px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; /* Separa el título del botón */
+    align-items: center; 
+    color: white; 
+    z-index: 1;
+    
+    /* ESPACIADO INTERNO: Esto aleja el texto de las paredes */
+    padding: 40px 25px; 
+    box-sizing: border-box; 
+}
+
+/* 4. El Botón: Menos brillo de base, más crecimiento */
+.electric-btn {
+    background: rgba(255, 0, 85, 0.2); /* Color acorde al borde rosa/rojo */
+    border: 1px solid rgba(255, 0, 85, 0.5);
+    color: white;
+    padding: 12px 25px;
+    width: auto; /* Dejamos que el padding mande */
+    min-width: 140px; 
+    border-radius: 12px;
+    cursor: pointer;
+    
+    /* Transición suave para el crecimiento */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s;
+}
+
+/* Efecto de agrandado en Hover */
+.electric-btn:hover {
+    transform: scale(1.15); /* Crece un 15% */
+    background: rgba(255, 0, 85, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad al crecer */
+}
+
+/* Pequeño ajuste para los textos */
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card-content p {
+    text-align: center;
+    opacity: 0.8;
+    line-height: 1.6;
+}

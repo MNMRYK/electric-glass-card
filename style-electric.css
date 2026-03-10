@@ -1,0 +1,57 @@
+/* --------- 1. BASE Y RESET ---------------------------------------------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --electric-border-color: #88289b;
+    --electric-light-color: oklch(from var(--electric-border-color) l c h);
+    --gradient-color: oklch(from var(--electric-border-color) 0.3 calc(c / 2) h / 0.4);
+    --color-neutral-900: oklch(0.185 0 0);
+    --font-primary: 'Quicksand', sans-serif;
+    --text-main: #ffffff;
+    --primary-color: #00f2ff;
+}
+
+body {
+    color: #f7f7f7;
+    font-family: var(--font-primary);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 0;
+    height: 100vh;
+}
+
+/* -----------2. HERO SECTION ----------------------------------*/
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente todo el bloque */
+    align-items: center;
+    min-width: 100vh;
+    min-height: 60vh;
+    gap: 30px; /* Espaciado uniforme entre todas las tarjetas */
+    padding: 50px 0;
+}
+
+.hero-section h1 {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    margin-bottom: 20px; /* Separación extra */
+}
+
+.hero-section p {
+    font-family: var(--font-primary);
+    line-height: 1.6; /* Esto es clave: más espacio entre líneas = más aire */
+    opacity: 0.8;
+}
+
+/* --- ESTILOS DE HERO Y ANIMACIONES GLOBALES --- */
+#animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.content { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 70vh; color: white; font-family: sans-serif; }
+@keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
