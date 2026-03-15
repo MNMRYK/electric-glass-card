@@ -14,9 +14,12 @@
 
 ### Componentes del Proyecto
 
-| Navbar | 
-<img src="https://github.com/user-attachments/assets/54ba643a-2a5d-4420-a1ec-b35c0d53a37c" width="400"> 
-| [Ver código](./nav.css) |
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/54ba643a-2a5d-4420-a1ec-b35c0d53a37c" width="400"> 
+  <br>
+  <a href="(./nav.css)">Ver código fuente</a>
+</div>
+
 
 | Electric Card | 
 <img src="https://github.com/user-attachments/assets/818d950a-6bea-4721-b6f2-f8362ef76adc" width="400"> 
