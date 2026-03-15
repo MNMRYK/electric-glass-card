@@ -1,35 +1,39 @@
 # electric-glass-card
 
--Navbar
--Electric Card
--Electric Border
--Electric Constant
--Glowing Card
+### Componentes del Proyecto
 
 <div align="center">
   <h2>Glowing Card</h2>
   <img src="glowing-card.gif" width="400" alt="Glowing Card">
   <br>
-  <a href="./ruta/a/tu/glowing-card.css">Ver código fuente</a>
+  <a href="(./glowing-card.gif)">Ver código fuente</a>
 </div>
-
-### Componentes del Proyecto
 
 <div align="center">
+  <h2>NavLat</h2>
   <img src="https://github.com/user-attachments/assets/54ba643a-2a5d-4420-a1ec-b35c0d53a37c" width="400"> 
   <br>
-  <a href="(nav.css)">Ver código fuente</a>
+  <a href="(./navlat.css)">Ver código fuente</a>
 </div>
 
+<div align="center">
+  <h2>Electric Card</h2>
+  <img src="https://github.com/user-attachments/assets/818d950a-6bea-4721-b6f2-f8362ef76adc" width="400"> 
+  <br>
+  <a href="(./electric-card.css)">Ver código fuente</a>
+</div>
 
-| Electric Card | 
-<img src="https://github.com/user-attachments/assets/818d950a-6bea-4721-b6f2-f8362ef76adc" width="400"> 
-| [Ver código](./electric-card.css) |
+<div align="center">
+  <h2>Electric Border</h2>
+  <img src="[https://github.com/user-attachments/assets/818d950a-6bea-4721-b6f2-f8362ef76adc](https://github.com/user-attachments/assets/604d5922-570f-4e81-a345-cb788f990123)" width="400"> 
+  <br>
+  <a href="(./electric-border.css)">Ver código fuente</a>
+</div>
 
-| Electric Border | 
-<img src="https://github.com/user-attachments/assets/604d5922-570f-4e81-a345-cb788f990123" width="400"> 
-| [Ver código] (electric-border.css) |
+<div align="center">
+  <h2>Electric Constant</h2>
+  <img src="https://github.com/user-attachments/assets/2313f6ec-0657-4675-bb0a-85bd20de3c8c" width="400"> 
+  <br>
+  <a href="(./electric-constant.css)">Ver código fuente</a>
+</div>
 
-| Electric Constant | 
-<img src="https://github.com/user-attachments/assets/2313f6ec-0657-4675-bb0a-85bd20de3c8c" width="400"> 
-| [Ver código](./electric-constant.css) |
