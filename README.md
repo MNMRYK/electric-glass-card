@@ -3,13 +3,6 @@
 ### Componentes del Proyecto
 
 <div align="center">
-  <h2>Glowing Card</h2>
-  <img src="glowing-card.gif" width="400" alt="Glowing Card">
-  <br>
-  <a href="(./glowing-card.gif)">Ver código fuente</a>
-</div>
-
-<div align="center">
   <h2>NavLat</h2>
   <img src="https://github.com/user-attachments/assets/54ba643a-2a5d-4420-a1ec-b35c0d53a37c" width="400"> 
   <br>
@@ -25,7 +18,7 @@
 
 <div align="center">
   <h2>Electric Border</h2>
-  <img src="[https://github.com/user-attachments/assets/818d950a-6bea-4721-b6f2-f8362ef76adc](https://github.com/user-attachments/assets/604d5922-570f-4e81-a345-cb788f990123)" width="400"> 
+  <img src="https://github.com/user-attachments/assets/604d5922-570f-4e81-a345-cb788f990123" width="400"> 
   <br>
   <a href="(./electric-border.css)">Ver código fuente</a>
 </div>
@@ -37,3 +30,9 @@
   <a href="(./electric-constant.css)">Ver código fuente</a>
 </div>
 
+<div align="center">
+  <h2>Glowing Card</h2>
+  <img src="glowing-card.gif" width="400" alt="Glowing Card">
+  <br>
+  <a href="(./glowing-card.gif)">Ver código fuente</a>
+</div>
