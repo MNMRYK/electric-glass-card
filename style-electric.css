@@ -55,3 +55,39 @@ body {
 #animated-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
 .content { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 70vh; color: white; font-family: sans-serif; }
 @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* --- Añade esto al final de tu style-electric.css --- */
+
+@media (max-width: 768px) {
+    body {
+        background-position: center; /* Centramos el fondo en móvil */
+    }
+
+    .hero-section {
+        min-width: 100%; /* Corregimos el 100vh que tenías por 100% */
+        padding: 80px 20px; /* Más espacio arriba para que no choque con el burger */
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem; /* Bajamos de 3rem a 2.2rem */
+        line-height: 1.1;
+    }
+
+    .main-wrapper {
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Asegura que el contenido principal esté en el eje central */
+    }
+    /* Ajuste para el contenedor de las tarjetas que vendrán luego */
+    .cards-container {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

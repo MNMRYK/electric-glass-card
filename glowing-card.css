@@ -125,3 +125,25 @@
     margin-bottom: 20px;
     transform: translateZ(30px);
 }
+
+/* Ajuste de profundidad para móvil */
+@media (max-width: 768px) {
+    .glowing-card {
+        width: 85vw !important; /* Centrado que arreglamos antes */
+        max-width: 300px;
+    }
+
+    /* Forzamos que los elementos hijos mantengan su posición 3D */
+    .date-badge {
+        transform: translateZ(60px) translateY(0); /* Más despegado en móvil */
+        transition: transform 0.3s ease;
+    }
+
+    .glowing-card h3 {
+        transform: translateZ(40px);
+    }
+
+    .glowing-card p {
+        transform: translateZ(50px);
+    }
+}

@@ -4,7 +4,8 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Mi Primer Fondo Animado</title>
+        <title>GSAP Electric Card</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style-electric.css">
         <link rel="stylesheet" href="electric-border.css">
         <link rel="stylesheet" href="electric-card.css">
@@ -17,7 +18,7 @@
     <body>
     <svg style="position: absolute; width: 0; height: 0;">
         <defs>
-            <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+            <filter id="turbulent-displace" colorInterpolationFilters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
                 <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
                 <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
                     <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
@@ -99,7 +100,7 @@
                 </article>
 
                 <article class="glowing-card">
-                    <div class="card-header" style="background-image: url('h.jpg');">
+                    <div class="card-header" style="background-image: url('gif/h.jpg');">
                         <div class="date-badge">JUNE <span>29</span></div>
                     </div>
                     <div class="card-body">

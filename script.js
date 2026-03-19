@@ -38,27 +38,36 @@ anime({
 
 /* D. GLOWING CARD */
 
+/* D. GLOWING CARD - ACTUALIZADO PARA PC Y MÓVIL */
 document.querySelectorAll('.glowing-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
+    
+    const handleMove = (e) => {
+        // Detecta si es dedo o ratón
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left; // Posición X del ratón en la card
+        const x = clientX - rect.left; 
         
-        // 1. Eliminamos el eje X (arriba/abajo)
-        const rotateX = 0; 
-        
-        // 2. Limitamos la rotación solo a la derecha (eje Y)
-        // Usamos Math.max para que el valor sea siempre positivo (0 a 15 grados)
+        // Calculamos la rotación
         const rotateY = Math.max(0, (x / rect.width) * 16);
         
-        // Aplicamos la rotación
         card.style.transition = 'none';
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        
-    });
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(${rotateY}deg)`;
+    };
 
-    // Resetear al salir el ratón
-    card.addEventListener('mouseleave', () => {
-        card.style.transition = 'transform 2s ease-out'; 
+    const handleReset = () => {
+        card.style.transition = 'transform 1s ease-out'; 
         card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
-    });
+    };
+
+    // Eventos para PC
+    card.addEventListener('mousemove', handleMove);
+    card.addEventListener('mouseleave', handleReset);
+
+    // Eventos para Móvil
+    card.addEventListener('touchmove', (e) => {
+        handleMove(e);
+        if (e.cancelable) e.preventDefault(); 
+    }, { passive: false });
+
+    card.addEventListener('touchend', handleReset);
 });

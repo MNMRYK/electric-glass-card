@@ -23,6 +23,7 @@
     overflow: hidden;
     transition: transform 0.4s ease;
     z-index: 1;
+    cursor: pointer;
 }
 
 /* 2. El Borde Eléctrico: Ahora con z-index más bajo para que no interfiera */
@@ -55,6 +56,12 @@
 /* 4. Activar el brillo al pasar el cursor */
 .electric-card:hover::before {
     opacity: 1;
+}
+
+/* Como no hay hover, usamos :active para que brille cuando el usuario la toca */
+.electric-card:active::before {
+    opacity: 1;
+    transition: opacity 0.2s;
 }
 
 /* Contenido dentro de la tarjeta */
@@ -91,8 +98,20 @@
     backdrop-filter: blur(5px);
     cursor: pointer;
     transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s;
 }
 
 .liquid-btn:hover {
     box-shadow: 0 0 20px rgba(111, 0, 255, 1);
+    transform: scale(1.15); /* Crece un 15% */
+}
+
+@media (max-width: 768px) {
+    .electric-content {
+        padding: 20px;   /* Un poco menos de padding para que el texto quepa mejor */
+    }
+    
+    .electric-content h3 {
+        font-size: 1.4rem;
+    }
 }
