@@ -27,4 +27,5 @@
   <img src="glowing-card.gif" width="400" alt="Glowing Card">
 </div>
 
-https://mnmryk.github.io/electric-glass-card/
+
+[Ver Proyecto en Vivo](https://mnmryk.github.io/electric-glass-card/).
